@@ -1,13 +1,63 @@
-
 <!DOCTYPE html>
-<html>
-<body style="text-align:center; font-family:Arial; margin-top:50px;">
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maybe Promises</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 50px 20px;
+      background-color: #697883;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
 
-<img src="foto.jpg" style="max-width:400px;"><br><br>
+    img {
+      max-width: 300px;
+      width: 80%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
 
-<a href="https://open.spotify.com/intl-de/artist/4bycZoMTQSarMiLAnIdQfr?si=nAiuUqMGR8-7vr-iLPSVuw">Spotify</a><br><br>
-<a href="https://www.instagram.com/maybepromises/">Instagram</a><br><br>
-<a href="https://www.youtube.com/@MaybePromises">YouTube</a>
+    .button {
+      display: block;
+      width: 80%;
+      max-width: 300px;
+      padding: 15px 0;
+      margin: 15px 0;
+      background-color: #4a90e2;
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .button:hover {
+      background-color: #357abd;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <img src="foto.jpg" alt="Maybe Promises Foto">
+
+  <a href="https://open.spotify.com/intl-de/artist/4bycZoMTQSarMiLAnIdQfr?si=nAiuUqMGR8-7vr-iLPSVuw" target="_blank" class="button">Spotify</a>
+  <a href="https://www.instagram.com/maybepromises/" target="_blank" class="button">Instagram</a>
+  <a href="https://www.youtube.com/@MaybePromises" target="_blank" class="button">YouTube</a>
 
 </body>
 </html>
