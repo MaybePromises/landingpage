@@ -98,16 +98,16 @@
   <a href="https://www.instagram.com/maybepromises/" target="_blank" class="button">Instagram</a>
   <a href="https://www.youtube.com/@MaybePromises" target="_blank" class="button">YouTube</a>
 
-  <!-- Kontakt Button (Bot-geschützt, Base64 codiert) -->
+  <!-- Contact Button (bot-geschützt via Base64) -->
   <script>
     (function() {
-      const encoded = "aW5mb0BtYXliZXByb21pc2VzLmNvbQ=="; 
+      const encoded = "aW5mb0BtYXliZXByb21pc2VzLmNvbQ==";
       const email = atob(encoded);
 
       const link = document.createElement("a");
-      link.href = "mailto:" + email + "?subject=Anfrage%20über%20Website";
+      link.href = "mailto:" + email + "?subject=Website%20Enquiry";
       link.className = "button";
-      link.textContent = "Kontakt per E-Mail";
+      link.textContent = "Contact";
 
       document.body.appendChild(link);
     })();
