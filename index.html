@@ -98,15 +98,29 @@
   <a href="https://www.instagram.com/maybepromises/" target="_blank" class="button">Instagram</a>
   <a href="https://www.youtube.com/@MaybePromises" target="_blank" class="button">YouTube</a>
 
+  <!-- Kontakt Button (Bot-geschützt, Base64 codiert) -->
+  <script>
+    (function() {
+      const encoded = "aW5mb0BtYXliZXByb21pc2VzLmNvbQ=="; 
+      const email = atob(encoded);
+
+      const link = document.createElement("a");
+      link.href = "mailto:" + email + "?subject=Anfrage%20über%20Website";
+      link.className = "button";
+      link.textContent = "Kontakt per E-Mail";
+
+      document.body.appendChild(link);
+    })();
+  </script>
 
   <!-- Video 1 -->
-  <div class="video-wrapper" onclick="loadVideo(this, 'VIDEO_ID_1')">
+  <div class="video-wrapper" onclick="loadVideo(this, '9PuOYAvVFDM')">
     <img src="https://img.youtube.com/vi/9PuOYAvVFDM/hqdefault.jpg" alt="Video Vorschau">
     <div class="play-button">▶</div>
   </div>
 
   <!-- Video 2 -->
-  <div class="video-wrapper" onclick="loadVideo(this, 'VIDEO_ID_2')">
+  <div class="video-wrapper" onclick="loadVideo(this, 'A8p2zZJP8wI')">
     <img src="https://img.youtube.com/vi/A8p2zZJP8wI/hqdefault.jpg" alt="Video Vorschau">
     <div class="play-button">▶</div>
   </div>
