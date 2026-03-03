@@ -36,7 +36,7 @@
       padding: 15px 0;
       margin: 15px 0;
       background-color: #e9c3b2;
-      color: #697883; /* Schriftfarbe angepasst */
+      color: #697883; /* Schriftfarbe an Hintergrund angepasst */
       font-size: 1.2em;
       font-weight: bold;
       text-decoration: none;
@@ -85,7 +85,7 @@
       justify-content: center;
       align-items: center;
       font-size: 30px;
-      color: #697883; /* ebenfalls angepasst */
+      color: #697883;
     }
   </style>
 </head>
@@ -113,6 +113,54 @@
     })();
   </script>
 
+  <!-- Dezenter Impressums-Link -->
+  <div style="margin-top:20px; font-size:0.8em; opacity:0.6;">
+    <a href="#" onclick="openImpressum(); return false;" style="color:#e9c3b2; text-decoration:none;">
+      Impressum
+    </a>
+  </div>
+
+  <!-- Impressum Modal -->
+  <div id="impressumModal" style="
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    box-sizing:border-box;
+  ">
+    <div style="
+      background:#697883;
+      max-width:500px;
+      width:100%;
+      padding:30px;
+      border-radius:12px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.4);
+      text-align:left;
+      position:relative;
+    ">
+      <div style="position:absolute; top:15px; right:20px; cursor:pointer;"
+           onclick="closeImpressum()">✕</div>
+
+      <h2 style="margin-top:0;">Impressum</h2>
+      <p>
+        Max Mustermann<br>
+        Künstlername: Maybe Promises<br>
+        Musterstraße 12<br>
+        12345 Musterstadt<br>
+        Deutschland
+      </p>
+      <p>
+        E-Mail: info@maybepromises.com
+      </p>
+    </div>
+  </div>
+
   <!-- Video 1 -->
   <div class="video-wrapper" onclick="loadVideo(this, '9PuOYAvVFDM')">
     <img src="https://img.youtube.com/vi/9PuOYAvVFDM/hqdefault.jpg" alt="Video Vorschau">
@@ -132,70 +180,14 @@
         'src="https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1" ' +
         'frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
     }
+
+    function openImpressum() {
+      document.getElementById("impressumModal").style.display = "flex";
+    }
+    function closeImpressum() {
+      document.getElementById("impressumModal").style.display = "none";
+    }
   </script>
 
-<!-- Impressum Link -->
-<div style="margin-top:40px; font-size:0.9em;">
-  <a href="#" onclick="openImpressum(); return false;" 
-     style="color:#e9c3b2; text-decoration:none;">
-     Impressum
-  </a>
-</div>
-
-<!-- Impressum Modal -->
-<div id="impressumModal" style="
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.7);
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-  box-sizing:border-box;
-">
-
-  <div style="
-    background:#697883;
-    max-width:500px;
-    width:100%;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.4);
-    text-align:left;
-    position:relative;
-  ">
-
-    <div style="position:absolute; top:15px; right:20px; cursor:pointer;"
-         onclick="closeImpressum()">✕</div>
-
-    <h2 style="margin-top:0;">Impressum</h2>
-
-    <p>
-      Maybe Promises<br>
-      S. Wehrmann<br>      
-      Kanonenstr. 55<br>
-      45731 Waltrop<br>
-      Deutschland
-    </p>
-
-    <p>
-      E-Mail: contact-at-maybepromises.com
-    </p>
-
-  </div>
-</div>
-
-<script>
-  function openImpressum() {
-    document.getElementById("impressumModal").style.display = "flex";
-  }
-  function closeImpressum() {
-    document.getElementById("impressumModal").style.display = "none";
-  }
-</script>
-  
 </body>
 </html>
