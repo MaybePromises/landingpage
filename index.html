@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maybe Promises</title>
+
   <style>
     body {
       text-align: center;
@@ -47,10 +48,48 @@
     .button:hover {
       background-color: #d4a898;
       transform: translateY(-2px);
-      box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+    }
+
+    .video-wrapper {
+      width: 90%;
+      max-width: 600px;
+      margin: 30px 0;
+      position: relative;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+      background-color: black;
+    }
+
+    .video-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      background-color: rgba(233,195,178,0.9);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      color: #333;
     }
   </style>
 </head>
+
 <body>
 
   <img src="foto.jpg" alt="Maybe Promises Foto">
@@ -58,6 +97,28 @@
   <a href="https://open.spotify.com/intl-de/artist/4bycZoMTQSarMiLAnIdQfr?si=nAiuUqMGR8-7vr-iLPSVuw" target="_blank" class="button">Spotify</a>
   <a href="https://www.instagram.com/maybepromises/" target="_blank" class="button">Instagram</a>
   <a href="https://www.youtube.com/@MaybePromises" target="_blank" class="button">YouTube</a>
+
+
+  <!-- Video 1 -->
+  <div class="video-wrapper" onclick="loadVideo(this, 'VIDEO_ID_1')">
+    <img src="https://img.youtube.com/vi/9PuOYAvVFDM/hqdefault.jpg" alt="Video Vorschau">
+    <div class="play-button">▶</div>
+  </div>
+
+  <!-- Video 2 -->
+  <div class="video-wrapper" onclick="loadVideo(this, 'VIDEO_ID_2')">
+    <img src="https://img.youtube.com/vi/A8p2zZJP8wI/hqdefault.jpg" alt="Video Vorschau">
+    <div class="play-button">▶</div>
+  </div>
+
+  <script>
+    function loadVideo(element, videoId) {
+      element.innerHTML =
+        '<iframe width="100%" height="100%" ' +
+        'src="https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1" ' +
+        'frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+    }
+  </script>
 
 </body>
 </html>
